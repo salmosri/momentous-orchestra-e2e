@@ -18,12 +18,3 @@ export function add(a: number, b: number): number {
 export function multiply(a: number, b: number): number {
   return a * b;
 }
-
-/**
- * Clamps a value between a minimum and maximum bound.
- */
-export function clamp(value: number, min: number, max: number): number {
-  if (value < min) return min;
-  if (value > max) return max;
-  return value;
-}
