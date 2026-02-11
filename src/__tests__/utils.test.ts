@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { greet, add, multiply, factorial } from '../utils.js';
+import { greet, add, multiply, factorial, clamp } from '../utils.js';
 
 describe('utils', () => {
   it('greets by name', () => {
@@ -33,5 +33,31 @@ describe('utils', () => {
   it('throws error for negative numbers', () => {
     expect(() => factorial(-1)).toThrow('Factorial is not defined for negative numbers');
     expect(() => factorial(-5)).toThrow('Factorial is not defined for negative numbers');
+  });
+
+  it('clamps value below minimum', () => {
+    expect(clamp(5, 10, 20)).toBe(10);
+  });
+
+  it('clamps value above maximum', () => {
+    expect(clamp(25, 10, 20)).toBe(20);
+  });
+
+  it('returns value within range', () => {
+    expect(clamp(15, 10, 20)).toBe(15);
+  });
+
+  it('returns min when value equals min', () => {
+    expect(clamp(10, 10, 20)).toBe(10);
+  });
+
+  it('returns max when value equals max', () => {
+    expect(clamp(20, 10, 20)).toBe(20);
+  });
+
+  it('handles min equal to max', () => {
+    expect(clamp(5, 10, 10)).toBe(10);
+    expect(clamp(15, 10, 10)).toBe(10);
+    expect(clamp(10, 10, 10)).toBe(10);
   });
 });
