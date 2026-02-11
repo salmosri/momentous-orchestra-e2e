@@ -18,3 +18,13 @@ export function add(a: number, b: number): number {
 export function multiply(a: number, b: number): number {
   return a * b;
 }
+
+/**
+ * Truncates a string to maxLen characters, appending "..." if truncated.
+ */
+export function truncate(str: string, maxLen: number): string {
+  if (str.length <= maxLen) {
+    return str;
+  }
+  return str.slice(0, maxLen) + '...';
+}
