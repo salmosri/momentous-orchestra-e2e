@@ -28,3 +28,14 @@ export function truncate(str: string, maxLen: number): string {
   }
   return str.slice(0, maxLen) + '...';
 }
+
+/**
+ * Pads the start of a string to reach the target length.
+ */
+export function padStart(str: string, targetLen: number, padChar: string): string {
+  if (str.length >= targetLen) {
+    return str;
+  }
+  const padLength = targetLen - str.length;
+  return padChar.repeat(padLength) + str;
+}
