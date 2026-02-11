@@ -1,6 +1,6 @@
 # Momentous Orchestra E2E Test Repo
 
-This is a test repository for validating the orchestration pipeline.
+This is a test repositry for validating the orchestration pipeline.
 
 ## Getting Started
 
