@@ -1,4 +1,8 @@
 /**
+ * Copyright (c) 2026. All rights reserved.
+ */
+
+/**
  * Greets a person by name.
  */
 export function greet(name: string): string {
