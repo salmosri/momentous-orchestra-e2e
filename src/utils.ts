@@ -57,3 +57,22 @@ export function clamp(value: number, min: number, max: number): number {
   }
   return value;
 }
+
+/**
+ * Checks if a string is a palindrome (reads the same forwards and backwards).
+ * Case-insensitive comparison.
+ */
+export function isPalindrome(str: string): boolean {
+  // Normalize the string to lowercase for case-insensitive comparison
+  const normalized = str.toLowerCase();
+
+  // Compare characters from both ends moving inward
+  const len = normalized.length;
+  for (let i = 0; i < len / 2; i++) {
+    if (normalized[i] !== normalized[len - 1 - i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
