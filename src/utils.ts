@@ -1,9 +1,4 @@
 /**
- * Build 1770823732363-A
- * Utility functions for common operations
- */
-
-/**
  * Greets a person by name.
  */
 export function greet(name: string): string {
