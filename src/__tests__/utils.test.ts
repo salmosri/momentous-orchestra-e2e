@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { greet, add, multiply } from '../utils.js';
+import { greet, add, multiply, factorial } from '../utils.js';
 
 describe('utils', () => {
   it('greets by name', () => {
@@ -12,5 +12,26 @@ describe('utils', () => {
 
   it('multiplies two numbers', () => {
     expect(multiply(4, 5)).toBe(20);
+  });
+
+  it('calculates factorial of 0', () => {
+    expect(factorial(0)).toBe(1);
+  });
+
+  it('calculates factorial of 1', () => {
+    expect(factorial(1)).toBe(1);
+  });
+
+  it('calculates factorial of 5', () => {
+    expect(factorial(5)).toBe(120);
+  });
+
+  it('calculates factorial of 10', () => {
+    expect(factorial(10)).toBe(3628800);
+  });
+
+  it('throws error for negative numbers', () => {
+    expect(() => factorial(-1)).toThrow('Factorial is not defined for negative numbers');
+    expect(() => factorial(-5)).toThrow('Factorial is not defined for negative numbers');
   });
 });
