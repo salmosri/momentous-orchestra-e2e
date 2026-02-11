@@ -1,5 +1,4 @@
 /**
- * Build 1770824124948-A
  * Greets a person by name.
  */
 export function greet(name: string): string {
