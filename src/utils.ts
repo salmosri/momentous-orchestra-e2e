@@ -96,3 +96,15 @@ export function truncate(str: string, maxLen: number): string {
   }
   return str.slice(0, maxLen) + '...';
 }
+
+/**
+ * Pads the start of a string to reach a target length.
+ */
+export function padStart(str: string, targetLen: number, padChar: string): string {
+  if (str.length >= targetLen) {
+    return str;
+  }
+  const padLength = targetLen - str.length;
+  const padding = padChar.repeat(Math.ceil(padLength / padChar.length)).slice(0, padLength);
+  return padding + str;
+}
